@@ -58,7 +58,7 @@ object. For example::
 
     @login_manager.user_loader
     def load_user(user_id):
-        return User.get(user_id)
+        return User.get_id(user_id)
 
 It should return `None` (**not raise an exception**) if the ID is not valid.
 (In that case, the ID will manually be removed from the session and processing
